@@ -1,27 +1,303 @@
-body {
+/* body 설정 */
+body, html {
   margin: 0;
+  padding: 0;
+  font-family: "Verdana", sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
 }
 
-/* .App {
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 20px;
-  border: 1px solid gray;
+/* nav */
+.navbar {
+  display: flex;
+  background-color: #121212;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.nav_logo img {
+  height: 40px;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav_links li {
+  display: inline-block;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav_links a:hover {
+  color: #ff00c8;
+}
+
+.club, .earn {
+  font-weight: bold;
+}
+
+.nav_btn {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn, .language-btn {
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ff00c8;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #ff1493;
+}
+
+.language-btn {
+  background-color: #333;
+}
+
+.language-btn:hover {
+  background-color: #444;
+}
+
+/* header */
+.club-main {
+  margin: 0 300px;
+  height: 100%;
+}
+
+.club-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  background-color: aliceblue;
-} */
+  justify-content: center;
+}
 
-
-.App {
-  max-width: 500px;
+.club-header {
+  display: flex;
   width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 20px;
-  border: 5px dotted gray;
-  background-color: aliceblue;
+  height: 150px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  background: linear-gradient(140deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+}
+
+.club-header p {
+  margin: 0;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.club-namebox h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.club-namebox > div {
+  display: flex;
+  gap: 15px;
+  color: gray;
+}
+
+.club-userbox {
+  display: flex;
+  gap: 10px;
+  color: #fff;
+}
+
+.club-btns {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.club-btns button {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #ff00c8;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.club-btns button:hover {
+  background-color: #ff00c8;
+}
+
+.club-details_ranking_title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.club-details_ranking_title h2 {
+  color: #fff;
+}
+
+.club-details_ranking_title p {
+  color: #ff00c8;
+}
+
+.club-details_ranking_list {
+  background-color: #121212;
+  padding: 0 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.club-details_ranking_list_header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: gray;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.club-details_ranking_list_userlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  gap: 20px;
+}
+
+.club-details_ranking_list_header p, 
+  .club-details_ranking_list_userlist p {
+    flex: 1;  /* header와 userlist 항목에 있는 각각의 <p>태그가 동일한 공간을 차지하도록 만듦 */
+    text-align: center;
+}
+
+.club-details_quest_title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.club-details_quest_title h2 {
+  color: #fff;
+}
+
+.club-details_quest_title p {
+  color: #ff00c8;
+  ;
+}
+
+.club-details_quest_box {
+  background-color: #121212;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.club-details_quest_box_detail {
+  background-color: #222;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.club-details_rq {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  width: 100%;
+}
+
+.club-details_ranking, .club-details_quest {
+  flex: 1; /* 두 영역이 화면을 균등하게 차지하도록 설정 */
+  max-width: 50%; /* 각 영역이 최대 절반씩 차지하게 설정 */
+  height: 350px;
+}
+
+.club-details_ranking_list::-webkit-scrollbar, 
+  .club-details_quest_box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.club-details_ranking_list::-webkit-scrollbar-thumb, 
+  .club-details_quest_box::-webkit-scrollbar-thumb {
+    background-color: #ff00c8;
+    border-radius: 10px;
+    border: 2px solid #121212;
+    height: 30px;
+}
+
+.club-details_video_title {
+  margin-top: 100px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.club-details_video_title h2 {
+  color: #fff;
+}
+
+.club-details_video_title p {
+  color: #ff00c8;
+  ;
+}
+
+.club-details_video_detail {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.club-details_video_detail_box {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 300px; /* 고정 너비 설정 */
+}
+
+.club-details_video_detail_box >  img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.club-details_video_detail_box > p {
+  font-size: 20px;
 }
